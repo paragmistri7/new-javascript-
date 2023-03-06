@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bulbcontainer{
+            height: 300px;
+            width: 300px;
+    
+        }
+        .bulb{
+         
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <button id ='google'>google</button>
+    <button id ='apple'>apple</button>
+
+    <div class="bulb bulbcontainer" id="bulb">
+        fjjf
+    </div>
+</body>
+
+<script>
+// let ab = document.getElementById("google")
+
+// ab.addEventListener("click",  function () {
+//     window.location = 'https://www.google.com/'
+// })
+
+
+let b = document.getElementsByClassName('bulb')[0]
+
+setInterval= (function() {
+  b.classList.toggle("bulb")[0],300
+})
+
+
+// setInterval = ( function () {
+//     document.querySelector("#bulb").classList.toggle("bulb")
+// } ,300 )
+
+</script>
+</html>

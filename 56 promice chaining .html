@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // let p1 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         console.log("promise 1")
+        //         // resolve(console.log(545))
+        //         // resolve(545)
+        //         resolve("promise.....11")
+                
+        //     }, 3000)
+        // })
+        
+        // p1.then((value) => {
+        //     console.log(value)
+        //     let p2 = new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             console.log("promise......2")
+        //             // resolve(22)
+        //             resolve("promise.....22")
+        //         }, 3000)
+        //     })
+        //     return p2
+        // })
+        // .then((value) => {
+        //     console.log(value)
+        //     console.log('we are done')
+        //     return 2
+        // }).then((value)=>{
+        //     console.log(value)
+        //     console.log("completely done")
+        // })
+
+
+
+        
+        const loadscript = (src)=>{
+           return new Promise((resolve, reject) => {
+            let script = document.createElement("script")
+            script.src = src
+            document.body.appendChild(script)
+
+            script.onload= (script)=>{
+                resolve("script has been loaded")
+            }
+            script.onerror = (script)=>{
+                reject("not loded script.......")
+            }
+           })
+        }
+
+        let p1 = loadscript("https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js")
+
+        p1.then((value)=>{
+            console.log(value)
+            return(loadscript("https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"))
+        }).then((value)=>{
+            // console.log(value)
+            console.log ("second script loaded")
+        })
+        
+        .catch((error)=>{
+            console.log("catch the error")
+        })
+
+
+
+    </script>
+</body>
+
+</html>

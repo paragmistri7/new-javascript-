@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class railwayform {
+            submit(){
+                alert (  this.name +" form is submitted " + this.a)
+            }
+            cancel(){
+                alert( this.name +" form is cacelled "+ this.a)
+            }
+            fill(p ,q){
+                this.name = p
+                this.a = q
+            }
+        }
+
+        let parag = new railwayform()
+        parag .fill("gohil" , 1234)
+
+        let hardik = new railwayform()
+        hardik.fill("unagar" , 6789)
+
+        parag.submit()
+        hardik.submit()
+        hardik.cancel()
+    </script>
+</body>
+</html>

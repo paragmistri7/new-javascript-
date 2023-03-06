@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let wether = async () => {
+
+            let delhi = new Promise((resolve, reject) => {
+
+                setTimeout(() => {
+                    resolve("delhi wether is 22c")
+                }, 3000)
+            })
+
+            let mumbai = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("mumbai wether is 55c")
+                }, 5000);
+            })
+
+
+
+            console.log("delhi fectching")
+            let delhiw = await delhi
+            console.log("delhi fetched")
+            console.log("mumbai fectching")
+            let mumbaiw = await mumbai
+            console.log("mumbai fetched")
+
+
+            return [delhiw, mumbaiw]
+
+        }
+        wether().then((val) => {
+            console.log(val)
+        })
+
+
+        const name =async () => {
+            let p1 = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("name is resolve")
+                }, 10000);
+            })
+
+            return await p1
+
+        }
+        name().then((val) => {
+            console.log(val)
+        })
+
+
+        let asd = async ( ) =>{
+            let s = await wether()
+            let r = await name()
+            return[s , r]
+        }
+        asd().then((d)=>{
+            console.log(d)
+        })
+
+
+
+    </script>
+</body>
+
+</html>

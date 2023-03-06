@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Animal {
+            constructor(name , color){
+                this.name1 = name
+                this.color1 = color
+            }
+            run(){
+                console .log(this.name1 + " monkey is running and his color is " + this.color1)
+            }
+            call(){
+                console.log(`${this.name1}  monkey is calling and his color is  ${this.color1}`)
+            }
+
+        }
+        class Monkey extends Animal {
+            eat(){
+                console . log(this.name1 + " monkey is eating banana")
+            }
+        }
+
+        let a =new Animal("hardik" , "orange")
+        let b =new Animal("harnish" , "red")
+
+        // let c =new Animal("pintu" , " black")
+        let c =new Monkey("pintu" , " black")
+
+        a.run()
+        b.call()
+
+        c.eat()
+        // inheritance 
+        c.run()
+        c.call()
+        
+    </script>
+</body>
+</html>

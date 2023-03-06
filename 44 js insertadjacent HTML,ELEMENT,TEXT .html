@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 2px solid red;
+        }
+
+        .one {
+            border: 2px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    first out
+    <div class="container">
+        first in
+        <div class="one">
+            hello ........
+        </div>
+        last in
+    </div>
+    last out
+    <!-- <div class="one"></div> -->
+</body>
+
+<script>
+    let ab = document.getElementsByClassName("one")[0]
+    console.log(ab) 
+
+    // bb ab be ae
+
+    ab.insertAdjacentHTML("beforebegin", "<h2 class='what'> hardik </h2>");
+    
+    ab.insertAdjacentHTML("afterbegin", "<h2 class='what'>shambhu </h2>");
+
+    ab.insertAdjacentHTML("beforeend", "<h2 class='what'>harnish </h2>");
+
+    ab.insertAdjacentHTML("afterend", "<h2 class='what'>pintu  </h2>");
+
+
+
+</script>
+
+</html>

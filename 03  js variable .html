@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>03. variable = var , let & const</h1>
+
+    <script>
+        // //   types  of  variable 
+        // 1.  var
+        // 2.  let 
+        // 3.  const
+
+       // multipal var with same identification "its  working" 
+
+        var a = 45
+        var a = '454'
+        a = 147 
+        var b = 'string'
+
+        console.log(a)
+
+
+
+        // multipal let with same identification "its not  working" 
+
+        let c = 62
+        // let  c = 456
+        c = 123          /*  its  working */
+        let d = 'store'
+
+        console.log(c)
+
+        
+        
+        const e = 'men'
+        //  const e = "men2"         /*its not working*/
+        // const e ;                /*its not working*/
+        // e = men3                /* not change identy value    */
+        console.log(e)
+
+
+        
+        // let = block level variable 
+
+        {
+            let c = "work"
+            console.log(c)
+        }
+
+        console.log(c)
+
+
+        // var = not block level  variable 
+        {
+            var a = 99
+            console.log(a)
+        }
+
+        console.log(a)
+
+        // const  = block level variable 
+
+        {
+            const e = 'women'
+            console.log(e)
+        }
+
+        console.log(e)
+
+    </script>
+
+</body>
+
+</html>

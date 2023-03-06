@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Employee {
+            login() {
+                console.log(`employee has logged in `)
+            }
+            logout() {
+                console.log(`employee has logged out `)
+            }
+            reqleaves(a) {
+                console.log(`employye has requested leaves ${a}`)
+
+                // many line  
+
+                // console.log(`employ`)
+                // console.log(`employye has re`)
+                // console.log(`employye has requested `)
+                // console.log(`employye has requested le`)
+                // console.log(`emp}`)
+                // console.log(`employye has `)
+            }
+        }
+        class Programmer extends Employee {
+            coffee() {
+                console.log(`employee has requested coffee `)
+
+            }
+
+            // over riding 
+            reqleaves(a) {
+                console.log(`employye has requested leaves ${a + 2} extra leaves`)
+            }
+
+            
+            // if many line in Employee class so called super 
+            // reqleaves() {
+            //     super.reqleaves(56)
+            //     console.log(`employye has requested leaves extra leaves+++++++++++`)
+            // }
+
+
+        }
+        let e = new Programmer
+
+        e.login()
+        e.reqleaves(3)
+
+    </script>
+</body>
+</html>

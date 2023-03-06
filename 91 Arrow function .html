@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let abc = ()=>{
+        //     console.log("type...1")
+        // }
+        // abc()
+
+        // let de = ()=> console.log("type...2"); console.log("type...3")
+        //  de()
+
+        //  let c = name => console.log("type...4 " + name)
+        //  c("parag")
+
+        //  let d = (name ,surname) => console.log(surname + " type...4 " + name)
+        //  d("parag" , "Gohil")
+
+        //  const kl = {
+        //     name : "Parag",
+        //     role : "engineer",
+        //     exp : 25,
+        //     show : function op () {
+        //         console.log(`${this.name} type ...6 ${kl.role}`)
+        //     }
+        //  }
+        //  console.log( "type....5 "+kl.name)
+        //  kl.show()
+
+         const kl = {
+            name : "Parag",
+            role : "engineer",
+            exp : 25,
+            show : function op () { 
+
+                //    function in function using 'this' keyword
+
+                // setTimeout (function hellow() {
+                //     console.log(` ${this.exp} type ...7 ${this.role}`)                   
+                // },2000)
+
+            //   let  that = this
+            //     setTimeout (function hellow() {
+            //         console.log(` ${that.exp} type ...8 ${kl.role}`)                   
+            //     },2000)
+
+             
+                // setTimeout ( hellow =()=> {
+                //     console.log(` ${this.exp} type ...9 ${kl.role}`)                   
+                // },2000)
+            }
+         }  
+         
+         kl.show()
+
+    </script>
+</body>
+</html>

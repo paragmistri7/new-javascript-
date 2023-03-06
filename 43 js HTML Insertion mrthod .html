@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 2px solid red;
+        }
+
+        #one {
+            border: 2px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    first out
+    <div class="container">
+        first in
+        <div id="one">
+            hello ........
+        </div>
+        last in
+    </div>
+    last out
+</body>
+
+<script>
+    let ab = document.getElementsByTagName("div")[1]
+    // ab.innerHTML = ab.innerHTML + "<h2> bambooooo </h2>";
+    
+    // let ab = document.getElementById("one")
+    // ab.innerHTML = ab.innerHTML+ "<h2> bambooooo </h2>" ;
+    
+    
+    
+    // let ab = document.getElementsByTagName("div")[1]
+    
+    let div = document.createElement("p");
+    div.innerHTML = "<h2> baba ramdev </h2>";
+     
+     ab.append(div)
+    ab.prepend(div)
+    ab.before(div)
+    ab.after(div)
+    ab.replaceWith(div)
+</script>
+
+</html>

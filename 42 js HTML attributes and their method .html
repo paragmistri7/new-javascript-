@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "first" class="hey" data-game="mario" data-player="parag">
+        hi my name is pk
+    </div>
+</body>
+
+<script>
+// let ab = document.getElementsByClassName("box")
+// console.log(ab)
+
+let ab = document.getElementById("first")
+
+ let a = ab.getAttribute("class")
+ console.log(a)
+
+ console.log(ab.hasAttribute("class"))
+ console.log(ab.hasAttribute("id"))
+ console.log(ab.hasAttribute("style"))
+
+//  first.setAttribute("hidden", "true")
+ ab.setAttribute("class", "vimal tambakooo")
+
+//  ab.removeAttribute("class")
+
+//  console.log(ab.attributes)
+
+
+// custom attributes data-
+
+ console.log(ab.dataset)
+ console.log(ab.dataset.game)
+ console.log(ab.dataset.player)
+
+
+</script>
+</html>

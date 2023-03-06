@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Animal {
+            constructor(name) {
+                this.name = name
+            }
+            walk() {
+                console.log("ab is walking")
+            }
+            get name() {
+                return this._name
+            }
+            set name(newname) {
+                return this._name = newname
+            }
+        }
+        let ab = new Animal("hardik")
+        ab.walk()
+
+        console.log(ab.name)
+        ab.name = "parag"
+        console.log(ab.name)
+
+        // instanceof operator check object in class
+
+        let m = "mklsfj"
+        let a = 123
+        console.log(a instanceof Animal)
+        console.log(ab instanceof Animal)
+        console.log(name instanceof Animal)
+        console.log(m instanceof Animal)
+
+    </script>
+</body>
+
+</html>

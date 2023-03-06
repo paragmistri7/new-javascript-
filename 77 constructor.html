@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class railwayform {
+            constructor(p,q){
+                console.log(p + " constructor "+ q)
+                
+                this.name = p
+                this.a = q
+            }
+            submit(){
+                alert (  this.name +" form is submitted " + this.a)
+            }
+            cancel(){
+                alert( this.name +" form is cacelled "+ this.a)
+            }
+           
+        }
+
+        let parag = new railwayform("gohil" , 1234)
+
+        let hardik = new railwayform("unagar" , 6789)
+
+        parag.submit()
+        hardik.submit()
+        hardik.cancel()
+    </script>
+</body>
+</html>

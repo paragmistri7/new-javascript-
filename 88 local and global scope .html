@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // // block scope 
+        // {
+        //     let a = 456
+        // }
+        // console.log(a)
+
+
+        // global scope 
+        {
+            var b = 456
+            console.log(b)
+        }
+        console.log(b)
+        
+        
+        // function scope        
+        function as() {
+            // global scope using var 
+            console.log(b)
+            
+            let s = 2
+            console.log(s)
+        }
+
+        // console.log(s)
+        as()
+    </script>
+</body>
+
+</html>

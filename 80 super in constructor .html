@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Employee {
+            constructor(name){
+                console.log("constructor called " + name)
+                this.name = name
+            }
+            login() {
+                console.log(`employee has logged in `)
+            }
+            logout() {
+                console.log(`employee has logged out `)
+            }
+            reqleaves(a) {
+                console.log(`employye has requested leaves ${a}`)
+
+    
+            }
+        }
+        class Programmer extends Employee {
+            // change employe  constructor  over riding
+            // call super with same arg..  
+            constructor(name){
+                super(name)
+                // this.name = name 
+                console.log("constructor called++++++++++")
+
+            }
+            coffee() {
+                console.log(`employee has requested coffee `)
+
+            }
+
+            // over riding 
+            reqleaves(a) {
+                console.log(`employye has requested leaves ${a + 2} extra leaves`)
+            }
+
+        }
+        let e = new Programmer("parag")
+
+        e.login()
+        e.reqleaves(3)
+
+    </script>
+</body>
+</html>

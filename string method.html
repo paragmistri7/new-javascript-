@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>string method</h1>
+    <p id="parag"></p>
+    <!-- <tt>Hello, world</tt> -->
+    <script>
+
+        // // 1 anchor method  
+
+        // // The anchor() method creates a string that embeds a string in an 
+        // // <a> element with a name (<a name="contents_anchor">Table of Contents</a>).
+        // // Syntax  = anchor(name)
+
+        // const myString = "Table of Contents";
+        // document.body.innerHTML = myString.anchor("contents_anchor");
+        // ================================================================================
+        // 2 at method 
+
+        //         The at() method takes an integer value and returns a new String.This method allows for positive and negative integers.Negative integers count back from the last string character.
+        //     Syntax = at(index)
+        // parameter = index
+        // The index(position) of the string character to be returned.
+        // Return value
+        // A String consisting of the single UTF - 16 code unit located at the specified position.Returns undefined if the given index can not be found.
+
+        // const myString = "Every green bus drives fast.";
+        // // Using length property and charAt() method
+        // const lengthWay = myString.charAt(myString.length - 2);
+        // console.log(lengthWay); // 't'
+        // // Using slice() method
+        // const sliceWay = myString.slice(-2 , -1);
+        // console.log(sliceWay); // 't'
+        // // Using at() method
+        // const atWay = myString.at(-2);
+        // console.log(atWay); // 't'
+        // ================================================================================
+        // // 3 big method    🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴
+        // // HTML5 में तत्व को ही हटा दिया गया है और अब इसका उपयोग नहीं किया जाना चाहिए। वेब डेवलपर्स को इसके बजाय CSS गुणों का उपयोग करना चाहिए।
+        // const parag = document.getElementById("parag")
+        // const worldString = "Hello, world";
+
+        // parag.innerHTML = worldString.strike()
+        // parag.innerHTML = worldString.blink()
+        // parag.innerHTML = worldString.bold()
+        // parag.innerHTML = worldString.italics()
+        // parag.innerHTML = worldString.small()
+        // parag.innerHTML = worldString.big() 
+        // parag.innerHTML = worldString.fontsize(20)
+        // parag.innerHTML = worldString.fontcolor(20)
+        // parag.innerHTML = worldString.fontsize(20)
+        // parag.innerHTML = worldString.link(url)
+
+        // ================================================================================
+
+        //  3 charAt(index) method 
+
+        // const anyString = "Brave new world";
+        // // return single string value 
+        // // No index was provided, used 0 as default
+        // console.log(`The character at index 0   is '${anyString.charAt()}'`);
+        // // You cannot use a nagative index
+        // console.log(`The character   is '${anyString.charAt()}'`);
+        // // if use nagative index , so use length property
+        // console.log(`The character   is '${anyString.charAt(anyString.length-4)}'`);
+        // console.log(`The character at index 0   is '${anyString.charAt(0)}'`);
+        // console.log(`The character at index 1   is '${anyString.charAt(1)}'`);
+        // console.log(`The character at index 2   is '${anyString.charAt(2)}'`);
+        // console.log(`The character at index 3   is '${anyString.charAt(3)}'`);
+        // console.log(`The character at index 4   is '${anyString.charAt(4)}'`);  
+
+        // console.log(`The character at index 999 is '${anyString.charAt(999)}'`);  //return empty String( out of index )
+        // ================================================================================
+
+        // 4 charCodeAt(index) 
+
+        // charCodeAt() विधि दिए गए इंडेक्स पर यूटीएफ -16 कोड यूनिट का प्रतिनिधित्व करने वाले 0 और 65535 के बीच एक पूर्णांक देता है।
+
+        // const sentence = 'The quick brown fox jumps over the lazy dog.';
+        // const index = 4
+        // // यदि अनुक्रमणिका सीमा से बाहर है, तो charCodeAt() NaN लौटाता है।
+        // // const index = 44
+
+        // console.log(` ${sentence.length} The character code ${sentence.charCodeAt(index)} is equal to ${sentence.charAt(index)}`);
+
+        // ================================================================================
+        // 5 codePointAt()
+
+//  Definition and Usage
+// The codePointAt() method returns the Unicode value at an index(position) in a string.
+// The index of the first position is 0, the second is 1, ....
+
+// let text = "HELLO WORLD";
+// let code = text.charCodeAt(1);
+
+
+
+// ================================================================================
+
+// 6 concat() method 
+
+// const str1 = 'Hello';
+// const str2 = 'World';
+// console.log(str1.concat(' ', str2));
+// // Expected output: "Hello World"
+// console.log(str2.concat(', ', str1));
+// // Expected output: "World, Hello"
+
+// let text1 = "Hello";
+// let text2 = "world!";
+// let text3 = "Have a nice day!";
+// let result = text1.concat(" ", text2, " ", text3);
+// console.log(result);
+
+// Definition and Usage
+// The concat() method joins two or more strings.
+// The concat() method does not change the existing strings.
+// // Return value
+// The concat() method returns a new string
+
+// ================================================================================
+
+//  7 endsWith()
+
+// एंड्सविथ () विधि यह निर्धारित करती है कि क्या एक स्ट्रिंग एक निर्दिष्ट स्ट्रिंग के वर्णों के साथ समाप्त होती है, सही या गलत के रूप में उचित रूप से लौटती है।
+
+// const str1 = 'Cats are the .best!';
+
+// // Expected output: true
+// console.log(str1.endsWith('best!'));
+// // Expected output: true  18 : total length
+// console.log(str1.endsWith('best', 18));
+
+// const str2 = 'Is this a question?';
+// // Expected output: false
+// console.log(str2.endsWith('question'));
+
+// ================================================================================
+
+//  8 fromCharCode() method 
+
+// The String.fromCharCode() method converts Unicode values to characters.
+// The String.fromCharCode() is a static method of the String object.
+// The syntax is always String.fromCharCode().
+
+// let text = String.fromCharCode(72, 69, 76, 76, 79);
+// console.log(text);
+
+// ================================================================================
+
+// 9 includes() method
+
+// Definition and Usage
+// The includes() method returns true if a string contains a specified string.
+// Otherwise it returns false.
+// The includes() method is case sensitive
+
+// let text = "Hello world, welcome to the world universe.";
+// let result = text.includes("world");
+// let result = text.includes("World");
+
+// includes() returns true if a string contains a specified string.
+// let result = text.includes("world", 12);
+// console.log(result);
+
+// ================================================================================
+
+// 10 indexOf()  method.
+
+// Definition and Usage
+// The indexOf() method returns the position of the first occurrence of a value in a string.
+// The indexOf() method returns -1 if the value is not found.
+// The indexOf() method is case sensitive.
+ 
+// let text = "Hello world, welcome to the universe.";
+// // let result = text.indexOf("welcome");
+// // let result = text.indexOf("Welcome");
+// // let result  =  text.indexOf("e");
+// let result  =  text.indexOf("e", 5);
+// // let result  =  text.indexOf("a");
+// console.log(result);
+
+// ================================================================================
+
+// 11  lastIndexOf() method
+
+// Definition and Usage
+// The lastIndexOf() method returns the index (position) of the last occurrence of a specified value in a string.
+// The lastIndexOf() method searches the string from the end to the beginning.
+// The lastIndexOf() method returns the index from the beginning (position 0).
+// The lastIndexOf() method returns -1 if the value is not found.
+// The lastIndexOf() method is case sensitive.
+
+// let text = "Hello planet earth, you are a great planet.";
+// // let result = text.lastIndexOf("planet");
+// // let result = text.lastIndexOf("Planet");
+// let result = text.lastIndexOf("planet", 10);
+// console.log(result);
+
+// ================================================================================
+
+// 12  length property
+
+// Definition and Usage
+// The length property returns the length of a string. in number
+// The length property of an empty string is 0.
+
+// let text = "Hello World!";
+// let length = text.length;
+// console.log(length);
+
+// =================================================================
+
+// 13 localeCompare()
+
+// Definition and Usage
+// The localeCompare() method compares two strings in the current locale.
+// The localeCompare() method returns sort order -1, 1, or 0 (for before, after, or equal).
+// The current locale is based on the language settings of the browser.
+
+// let text1 = "a";
+// let text2 = "b";
+// let result = text1.localeCompare(text2);
+// console.log(result);
+
+// =================================================================
+
+// const fruits = ["apple", "orange", "cherry"];
+//  const t = fruits.map((c, m)=>{
+//      console.log(m+1 , c)
+//  });
+//  console.log(t)
+
+//  const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// let text = fruits.constructor;
+
+//  console.log(text)
+
+
+//  const fruits = ["Banana", "Orange", "Apple", "Mango"];
+//  let text = fruits.entries((a , k)=>{
+// return a
+//  k
+//  })
+//  console.log(text)
+
+
+// const ages = [32, 33, 16, 40];
+// const s  =  ages.every( (ages)=>{
+// //    return ages > 10
+//    return ages < 50
+// } )
+//  console.log(s)
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango" , "djbsdkjb" , "jnfkjf"];
+// const s =   fruits.fill("Kiwi", 2, 4);
+//  console.log(s)
+
+    </script>
+</body>
+
+</html>

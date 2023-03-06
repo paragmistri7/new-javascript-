@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // promise work for parallel execution 
+
+        console.log("start")
+
+        let p1 = new Promise((resolve, reject) => {
+
+            setTimeout(() => {
+                console.log("settimeout")
+
+                // check after 4000 ms 
+                resolve("promise is resolve")
+                // reject(new Error("  promise is rejected  "))
+
+            }, 4000)
+
+        }).then((val) => {
+            console.log(val)
+        } , (err)=> {
+            console.log(err)
+        })
+
+        console.log("end")
+        console.log(p1)
+
+
+
+        // let p2 = new Promise((resolve, reject) => {
+
+        //     setTimeout(() => {
+
+        //         // check after 4000 ms
+        //         resolve("promise is resolve")
+        //         // reject(new Error ( "  promise is rejected  "))
+
+        //     }, 4000)
+        // }).catch((val) => {
+        //     console.log(val)
+        // })
+
+
+
+        // console.log(p2)
+
+    </script>
+
+
+</body>
+
+</html>

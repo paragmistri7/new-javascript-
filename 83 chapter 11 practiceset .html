@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // question 1 2   5
+        class Complex {
+            constructor(reald , image){
+                this.real = reald
+                this.image = image
+            }
+            adds (num){
+                this.reald= this.real + num.real
+                this.image = this.image + num.image
+            }
+
+            get reald (){
+                return this._reald
+            }
+            get image (){
+                return this._image
+            }
+            set reald(newreald){
+                this._reald = newreald
+            }
+            set image(newimage){
+                this._image = newimage
+            }
+        }
+        let a = new Complex (2 , 4)
+        let b = new Complex (7 , 1)
+        console.log(a.reald , a.image)
+        
+        a.real = (20)
+        a.real = (120)
+        a.image = (10)
+        b.image = (40)
+        a.adds(b)
+        
+        console.log(a.real , a.image)
+        console.log(a.reald , a.image)
+
+        // question 2
+
+        // class Human {
+        //     constructor(name , age){
+        //         this.name1 = name
+        //         this.age1 = age
+        //     }
+        //     walk (){
+        //         console.log( this.name1 + " is walking")
+        //     }
+        // }
+        // class Student extends Human {
+        //     walk (){
+        //         console.log( this.name1 + " is walking................")
+        //     }
+        // }
+
+        // let a = new Student ("hardik" , 10)
+        // a.walk()
+
+        // console.log(a instanceof Human)
+        // console.log(a instanceof Student)
+
+    </script>
+</body>
+</html>

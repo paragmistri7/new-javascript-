@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <button id="btn">click me</button>
+    </div>
+
+    <script>
+        // btn.addEventListener( "click" , function(){
+        //         alert("how are you")
+        //     }
+        // )
+        // btn.addEventListener( "click" , function(){
+        //         alert("what are you doing")
+        //     }
+        // )
+
+        // let ab = prompt("choose a number"
+        // )
+        // if (ab==2) {
+        //     removeEventListener( "click" , function(){
+        //         alert("how are you")})
+        // }
+
+        // copy
+
+let tb = document.getElementById("btn")
+
+        let x = function () {
+            alert("how are you")
+        }
+
+        let y = function () {
+            alert("what are you doing")
+        }
+
+        tb.addEventListener("click", x)
+
+        tb.addEventListener("click", y)
+
+        let ab = prompt("choose a number")
+
+        if (ab == '2') {
+            tb.removeEventListener("click", x)
+        }
+   
+    </script>
+</body>
+
+</html>

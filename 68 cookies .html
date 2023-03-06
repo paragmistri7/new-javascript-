@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(document.cookie)
+        document.cookie = "name = parag01234"
+        document.cookie = "name2 = parag01234...."
+        document.cookie = "name = paragnnnnnnnnn"
+        console.log(document.cookie)
+
+        let key = prompt("enter the key")
+        let value = prompt("enter the value")
+
+        document.cookie = `${key} = ${value}`
+        document.cookie = `${encodeURIComponent(key)} = ${encodeURIComponent(value)}`
+        // document.cookie = `${encodeURI(key)} = ${encodeURI(value)}`
+        
+    </script>
+</body>
+</html>

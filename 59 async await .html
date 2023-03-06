@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        async function parag() {
+
+            let delhi = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("delhi")
+
+                }, 2000)
+            })
+
+
+            let abad = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("a'bad")
+
+                }, 4000)
+            })
+
+            // delhi.then(alert)
+            // abad.then(alert)
+            console.log("fetching delhi")
+            let delhiw = await delhi
+            console.log(2, delhi)
+            console.log("fetching abad")
+            let abadw = await abad
+            console.log(4, abad)
+
+            return [delhiw, abadw]
+
+        }
+        // ---------------------------------------------------------------
+        //  let ab = parag()
+        //  console.log(ab)
+        // -------------------------------------------------------------------------------
+      
+        function hardik() {
+            console.log(" i am a hardik")
+        }
+
+        async function name() {
+
+            let a = await parag()
+            let b = await hardik()
+            return [a, b]
+        }
+        // console.log("welcome....")
+        name()
+
+    </script>
+
+</body>
+
+</html>

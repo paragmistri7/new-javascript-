@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Question 1
+        // let a = (text) => {
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             // resolve(text)
+        //             // console.log(text)
+
+        //             resolve()
+        //             console.log(text)
+
+        //         }, 2000)
+        //     })
+        // }
+
+        // (
+        //     async () => {
+        //         let m = await a("PARAG")
+        //         console.log(m)
+        //         let n = await a("MISTRY")
+        //         console.log(n)
+        //     }
+        // )()
+
+
+        // Question 2 spread
+        // function pk (a,s,x){
+        //     return a+s+x
+        // } 
+        // let x = [5,4,7]
+        // console.log(pk(...x));
+
+
+        // Question 3 
+        let a = (text ,s=6) => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(text)
+                    console.log(text)
+
+                    // resolve()
+                    // console.log(text)
+
+                }, 1000*s)
+            })
+        }
+
+        (
+            async () => {
+                let m = await a("PARAG" )
+                console.log(m)
+                let n = await a("MISTRY" , 4)
+                console.log(n)
+            }
+        )()
+        
+
+    </script>
+</body>
+
+</html>

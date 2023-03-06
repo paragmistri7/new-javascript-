@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let ab = [1, 4, 5, 6, 7, 8, 0, 3]
+
+
+        // let a = ab[0]
+        // let b = ab[1]
+
+
+        // let [a,b,c,...rest] = ab
+        // console.log(a,b,c,...rest)
+        // let [a,,,c,...rest] = ab
+        // console.log(a,c,...rest)
+
+        // let { a, b } = { a: 1, b: 5 }
+        // console.log(a, b)
+
+// spread operator 
+
+let arr = [ 4,5,9,4]
+let obj = {...arr}
+console.log(obj)
+
+function abs(a ,b ,c,d){
+    return a+b+c+d
+}
+console.log(abs(...arr))
+
+// referance = mdn spread and destructring 
+
+
+let vb = {
+    name : "parag" ,
+    company : "hnm",
+    adds : 1235
+}
+// console.log({vb ,name : "hardik"})
+// console.log(vb.name)
+
+console.log({...vb , name : "hardik"})
+console.log({ name : "hardik",...vb })
+
+
+    </script>
+</body>
+
+</html>
